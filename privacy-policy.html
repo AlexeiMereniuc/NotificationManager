@@ -18,18 +18,27 @@
         h2 { font-size: 1.2em; margin-top: 28px; }
         p, li { font-size: 0.95em; }
         ul { padding-left: 20px; }
-        .updated { color: #666; font-size: 0.85em; margin-bottom: 24px; }
+        .updated { color: #666; font-size: 0.85em; margin-bottom: 8px; }
+        .lang { font-size: 0.85em; margin-bottom: 24px; }
+        .highlight {
+            background: #f0eefe;
+            border-left: 3px solid #5b49f2;
+            padding: 10px 14px;
+            border-radius: 4px;
+        }
     </style>
 </head>
 <body>
 
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: March 21, 2026</p>
+<p class="updated">Last updated: June 10, 2026</p>
+<p class="lang"><a href="privacy-policy.ru.html">Русская версия</a></p>
 
 <p><strong>Notification Manager</strong> ("the App") is developed by Alexei Mereniuc. This Privacy Policy explains how the App handles your data.</p>
 
 <h2>Data Collection</h2>
 <p>The App does <strong>not</strong> collect, transmit, or share any personal data with third parties. All data processed by the App remains exclusively on your device.</p>
+<p class="highlight">The App does not request the <strong>INTERNET</strong> permission. It is therefore <strong>technically incapable</strong> of transmitting any data off your device. This can be independently verified by inspecting the App's manifest.</p>
 
 <h2>Data Stored Locally</h2>
 <p>To provide its core functionality, the App stores the following information in a local database on your device:</p>
@@ -42,18 +51,28 @@
 <h2>Permissions</h2>
 <p>The App requires certain Android permissions to function:</p>
 <ul>
-    <li><strong>Notification Access</strong> — to read and manage incoming notifications</li>
+    <li><strong>Notification Access</strong> — the App reads the title, text, source app, timestamp and channel of every notification posted on your device, including notifications that may contain personal information (such as messages). This content is used solely to apply your filter rules and to build your local notification history. It is stored only on your device and never leaves it.</li>
     <li><strong>Post Notifications</strong> — to repost modified notifications and show service alerts</li>
     <li><strong>Schedule Exact Alarms</strong> — to support alarm snooze functionality</li>
     <li><strong>Battery Optimization Exemption</strong> — to keep the notification listener service running reliably</li>
+    <li><strong>Receive Boot Completed</strong> — to restore the notification listener after a device restart</li>
 </ul>
 <p>These permissions are used solely for the App's on-device functionality.</p>
+
+<h2>Read Aloud and Language Detection</h2>
+<p>If you create "Read Aloud" rules, notification text is passed to the text-to-speech (TTS) engine configured on your device in order to be spoken. The TTS engine is a separate system component, and its own privacy policy applies to that processing.</p>
+<p>Automatic language detection for Read Aloud runs fully on-device using an offline Google ML Kit model; no text leaves the device for this purpose.</p>
+
+<h2>Backups and Device Transfer</h2>
+<p>Your notification history and settings are <strong>excluded from Google cloud backups</strong>. They may only be copied during a direct device-to-device transfer when you migrate to a new phone.</p>
 
 <h2>Third-Party Services</h2>
 <p>The App does not integrate any third-party analytics, advertising, or tracking services.</p>
 
 <h2>Data Retention and Deletion</h2>
 <p>You have full control over your data. You can delete notification history at any time from within the App. You can also configure automatic cleanup to remove old notifications after a chosen period. Uninstalling the App removes all stored data from your device.</p>
+<p>You can export your filter rules and notification history to a file of your choosing. Such exports are created only at your explicit request and are stored wherever you choose to save them; handling of exported files is under your control.</p>
+<p>Because the developer has no access to your data, requests concerning access to or erasure of your data (e.g. under GDPR) are fulfilled directly by you, on your device, using the controls described above.</p>
 
 <h2>Children's Privacy</h2>
 <p>The App is not directed at children under the age of 13. It does not knowingly collect any personal information from children.</p>
